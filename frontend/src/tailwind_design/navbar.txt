@@ -1,0 +1,129 @@
+<nav class=" bg-transparent my-2">
+<div class="flex justify-between w-3/7 md:max-w-7xl mx-auto">
+<div  class="text-black rounded-md px-3 py-2 text-sm font-medium">
+  <p>Ecommerce</p>
+</div>
+<div class="flex px-3 ">
+ 
+   <a href="#" class=" text-black rounded-md px-3 py-2 mx-1.5 text-sm font-medium  sm:hidden border-emerald-500 border hover:text-slate-50 hover:bg-emerald-500 duration-700">Login</a>
+<button class=" sm:hidden" >
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+     </svg>
+</svg>
+</button>
+
+</div>
+
+
+<div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            
+            <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Home</a>
+           <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Cart</a>
+           <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">About</a>
+           <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">User</a>
+            <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+</svg>
+</a>
+            <a href="#" class=" text-black px-3 py-2 text-sm font-medium border-l-slate-900 border-s">Logout</a>
+           <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Login</a>
+      
+          </div>
+        </div>
+</div>
+ <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Home</a>
+      <a href="#" class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Cart</a>
+      <a href="#" class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >About</a>
+      <a href="#" class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >User</a>
+      <a href="#" class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Logout</a>
+      
+    </div>
+  </div>
+
+</nav>
+
+
+{/* 
+        <nav class=" bg-transparent my-2">
+<div class="flex justify-between w-3/7 md:max-w-7xl mx-auto">
+<div  class="text-black rounded-md px-3 py-2 text-sm font-medium">
+  <p >Ecommerce</p>
+</div>
+<div class="flex px-3 ">
+{auth?""
+: <>  
+<Link to="/Login" class=" text-black rounded-md px-3 py-2 mx-1.5 text-sm font-medium  sm:hidden border-emerald-500 border hover:text-slate-50 hover:bg-emerald-500 duration-700">Login</Link>
+   <Link to="/Register" class=" text-black rounded-md px-3 py-2 mx-1.5 text-sm font-medium  sm:hidden border-emerald-500 border hover:text-slate-50 hover:bg-emerald-500 duration-700">Register</Link>
+    </>}
+   {
+    auth?
+<button class=" sm:hidden" onClick={handleNav}>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+  </svg>
+  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+</button>
+:""
+}
+
+</div>
+
+
+<div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+           {
+            auth?
+            <>
+            <Link to="/" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Home</Link>
+           <Link to="/Cart" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Cart</Link>
+        
+          
+           <Link to="/User" class=" text-black rounded-md px-3 py-2 text-sm font-medium">User</Link>
+            <a href="#" class=" text-black rounded-md px-3 py-2 text-sm font-medium">
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+</svg>
+</a>
+</>
+           :""
+} 
+            {
+            auth?  
+            <button onClick={handleLogout}   class=" text-black px-3 py-2 text-sm font-medium border-l-slate-900 border-s">Logout</button>
+            :""
+        }
+            {auth?"":
+           <Link to="/Login" class=" text-black rounded-md px-3 py-2 text-sm font-medium">Login</Link>
+        }
+          </div>
+        </div>
+</div>
+ {
+    // nav?"open":"close"
+ }
+  <div class={nav?"sm:hidden":"hidden"} id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+     
+      <Link to="/"  class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Home</Link>
+      <Link to="/Cart"  class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Cart</Link>
+
+      <Link to="/User"  class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >User</Link>
+      <button onClick={handleLogout}  class= "text-black block rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" >Logout</button>
+    Link
+    </div>
+  </div>
+
+</nav>
+
+        </> */}
